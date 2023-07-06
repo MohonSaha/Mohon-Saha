@@ -1,8 +1,8 @@
 import { FaHome, FaMobile, FaSuitcase, FaSun, FaUserAlt } from 'react-icons/fa';
-import './Navbar.css';
+import './Nav.css';
 import { useState } from 'react';
 
-const Navbar = () => {
+const Nav = () => {
       
         const [activeIndex, setActiveIndex] = useState(0);
       
@@ -58,4 +58,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default Nav;
