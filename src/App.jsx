@@ -7,6 +7,7 @@ import About from "./components/About/About";
 import Bot from "./components/Bot/Bot";
 import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
+import Project from "./components/Project/Project";
 import Skills from "./components/Skills/Skills";
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
       <Hero></Hero>
       <About></About>
       <Skills></Skills>
+      <Project></Project>
       <Bot></Bot>
 
 
