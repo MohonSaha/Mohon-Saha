@@ -1,5 +1,5 @@
 
-import { IoLogoFacebook, IoLogoGithub, IoLogoLinkedin, IoLogoTwitter } from "react-icons/io5";
+import { IoArrowDownOutline, IoLogoFacebook, IoLogoGithub, IoLogoLinkedin, IoLogoTwitter } from "react-icons/io5";
 import hero from "../../assets/images/profile.png";
 const Hero = () => {
   return (
@@ -23,7 +23,12 @@ const Hero = () => {
             Fullstack Developer
           </h4>
           <p className="text-gray-600 mt-3 tracking-widest">Self-taught programmer with proficiency in MERN stack, solid understanding of JavaScript, HTML and CSS. Committed to continuous learning and staying updated with industry trends. Skilled in creating responsive user interfaces and building RESTful APIs.</p>
-          <button className="btn-primary mt-8">Download Resume</button>
+
+          <a href="src\assets\Mohon Saha-Full Stack Developer.pdf" download>
+            <button className="btn-primary mt-6">Download Resume <IoArrowDownOutline className="animate-bounce"></IoArrowDownOutline>
+            </button>
+          </a>
+
           <div className="mt-8 text-3xl flex items-center md:justify-start justify-center gap-5 ">
             <IoLogoLinkedin className="cursor-pointer text-gray-600 hover:text-white duration-300"></IoLogoLinkedin>
             <IoLogoGithub className="cursor-pointer text-gray-600 hover:text-white duration-300"></IoLogoGithub>
