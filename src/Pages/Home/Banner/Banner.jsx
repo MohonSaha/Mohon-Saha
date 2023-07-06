@@ -3,7 +3,6 @@ import img1 from '../../../assets/Banner/andrew-neel-cckf4TsHAuw-unsplash (1).jp
 const Banner = () => {
     return (
         <div>
-            
 
             <div className=" relative w-full">
                     <img src={img1} className="w-full max-h-screen bg-cover bg-center" />
