@@ -25,9 +25,10 @@ const Navbar = () => {
     >
       <div className="flex items-center justify-between">
         <div className="mx-7">
-          <h4 className="text-4xl uppercase font-bold">
-            M<span className="text-cyan-600">OH</span>ON
-          </h4>
+          <span className="text-4xl uppercase font-bold flex">
+            <img src="logo-2.png" className="w-10" alt="" />
+            <h4>OHON</h4>
+          </span>
         </div>
         <div
           className={` ${

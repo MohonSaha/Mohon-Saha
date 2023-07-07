@@ -17,10 +17,7 @@ const About = () => {
           <div className="p-2">
             <div className="text-gray-300 my-3">
               <p className="text-justify leading-7 w-11/12 mx-auto">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
-                eos, quam vel quisquam, explicabo sit labore dignissimos optio
-                ratione quibusdam doloribus pariatur consequuntur sint.
-                Reprehenderit cupiditate possimus facere quasi voluptatem?
+              Hello, This is Mohon Saha. I would like to introduce myself as a practical and passionate front-end web developer. Because during the last year, I am learning sull-stack web technologies and applying them to various projects. During this time I have explored myself as a hard-working and fast learner also. And obviously, I have grown my time-management skill in me to learn some new technology every single day. All of these help me to be practical in this field.
               </p>
               <div className="flex mt-10 items-center gap-7">
                 {info.map((content) => (
@@ -35,7 +32,7 @@ const About = () => {
               </div>
               <br />
               <br />
-              <a href="./src/assets/Code_a_program.pdf" download>
+              <a href="#contact">
                 <button className="btn-primary">Hire Me</button>
               </a>
             </div>
