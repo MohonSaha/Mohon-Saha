@@ -1,25 +1,36 @@
-.container__nav{
+.container__nav {
     max-width: 1270px;
     margin-inline: auto;
 }
 
-.text_m{
+.text_m {
     color: var(--primary-color);
     text-shadow: 2px 2px hsl(0, 0%, 0%), -2px 2px hsl(0, 0%, 0%), 2px -2px hsl(0, 0%, 0%), -2px -2px hsl(0, 0%, 0%), 5px 5px 0 rgb(0 0 0 / 20%)
 }
 
-.nav__area{
+.nav__area {
     transition: all 0.6s;
     transition-timing-function: var(--transition);
 }
 
-.sticky__bg{
-     background-color: var(--bg-color);
+.sticky__bg {
+    background-color: var(--bg-color);
 }
 
 .open__nav,
 .menu__bar,
-.close__nav{
+.close__nav {
     transition: all 0.6s;
     transition-timing-function: var(--transition);
+}
+
+.name__logo,
+.logo__moon,
+.logo__hamburger {
+    color: var(--title-color);
+}
+
+.name__logo,
+.logo__moon {
+    font-size: var(--h5-font-size);
 }

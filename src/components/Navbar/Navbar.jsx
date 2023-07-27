@@ -1,16 +1,26 @@
 import { useEffect, useState } from "react";
 import './Navbar.css';
 import { IoCloseSharp, IoMenu, IoReorderTwo } from "react-icons/io5";
-import { FaGripLines, FaMoon } from "react-icons/fa";
+import { FaGripLines, FaMoon, FaSun } from "react-icons/fa";
 
 const Navbar = () => {
   const [sticky, setSticky] = useState(false);
   const [open, setOpen] = useState(false);
+  const [theme, setTheme] = useState("dark__theme");
 
 
   const toggleTheme = () => {
-    alert("yes")
+    if(theme === "dark__theme"){
+      setTheme("light__theme")
+    }
+    else{
+      setTheme("dark__theme")
+    }
   }
+
+  useEffect( () => {
+    document.body.className = theme;
+  } , [theme])
 
   const menuLinks = [
     { name: "HOME", link: "#home" },
@@ -36,7 +46,7 @@ const Navbar = () => {
           <span className="text-4xl uppercase font-bold flex">
             {/* <img src="logo-2.png" className="w-10" alt="" /> */}
             <span className="text_m">M</span>
-            <h4>OHON</h4>
+            <h4 className="name__logo">OHON</h4>
           </span>
         </div>
 
@@ -45,9 +55,9 @@ const Navbar = () => {
           <div className="flex items-center">
 
 
-            <span className="mr-5 cursor-pointer" onClick={() => toggleTheme()}>
+            <span className="mr-5 logo__moon cursor-pointer" onClick={() => toggleTheme()}>
               {
-                <FaMoon></FaMoon>
+                theme === "dark__theme" ? <FaSun></FaSun> : <FaMoon></FaMoon>
               }
             </span>
 
@@ -59,7 +69,7 @@ const Navbar = () => {
             >
 
               {
-                open ? <span className="open__nav cursor-pointer"><IoCloseSharp></IoCloseSharp></span> : <IoReorderTwo className="close__nav cursor-pointer"></IoReorderTwo>
+                open ? <span className="open__nav cursor-pointer"><IoCloseSharp></IoCloseSharp></span> : <IoReorderTwo className="close__nav cursor-pointer logo__hamburger"></IoReorderTwo>
               }
 
 

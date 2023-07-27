@@ -8,13 +8,14 @@
 :root{
 
     /*==== COLLERS ====*/
-    --primary-color: hsl(165, 60%, 40%);
+    /* --primary-color: hsl(165, 60%, 40%);
     --title-color: hsl(0, 0%, 100%);
     --text-color: hsl(0, 0%, 92%);
     --bg-color: hsl(216, 18%, 16%);
     --bg-color-alt: hsl(213, 10%, 21%);
     --container-color: hsl(217, 18%, 14%);
-    --border-color: hsl(210, 2%, 65%);
+    --border-color: hsl(210, 2%, 65%); */
+
     /* --first-gradient: linear-gradient(
         0deg, 
         var(--bg-color-alt) 0%, 
@@ -51,9 +52,6 @@
     --tiny-font-size: 13px;
     
 
-     /*==== SHADOW ====*/
-    --shadow: 5px 5px rgb(255 255 255 / 10%);
-
 
     /*==== TRANSITION ====*/
     --transition: cubic-bezier(0.3, 0. 0.3, 1);
@@ -82,13 +80,71 @@ body{
 }
 
 .dark__theme{
-    color: var(--text-color);
-    background-color: var(--bg-color);
+    --bg-color: hsl(216, 18%, 16%);
+    --primary-color: hsl(165, 60%, 40%);
+    --title-color: hsl(0, 0%, 100%);
+    --text-color: hsl(0, 0%, 92%);
+    --bg-color-alt: hsl(213, 10%, 21%);
+    --container-color: hsl(217, 18%, 14%);
+    --border-color: hsl(210, 2%, 65%);
+
+    /*==== SHADOW ====*/
+    --shadow: 5px 5px rgb(255 255 255 / 10%);
+
+    /* ========== BAR BACKGROUND ============ */
+    --bar-background: rgba(255, 255, 255, 0.2);
+
+    --shape-filter: invert(1);
+
+    --first-gradient: linear-gradient(
+        0deg, 
+        var(--bg-color-alt) 0%, 
+        var(--bg-color) 100%
+    );
+    --second-gradient: linear-gradient(
+        180deg, 
+        var(--bg-color-alt) 0%, 
+        var(--bg-color) 100%
+    );
+    --third-gradient: linear-gradient(
+        180deg, 
+        var(--bg-color) 0%, 
+        var(--bg-color) 100%
+    );
 }
 
 .light__theme{
-    color: var(--bg-color);
-    background-color: var(--text-color);
+    --bg-color: hsl(265, 87%, 94%);
+    --primary-color: hsl(165, 60%, 40%);
+    --title-color: hsl(0, 0%, 0%);
+    --text-color: hsl(0, 0%, 8%);
+    --container-color: hsl(0, 0%, 100%);
+    --border-color: hsl(0, 0%, 0%);
+
+    /*==== SHADOW ====*/
+    --shadow: 5px 5px rgba(1, 1, 1, 0.531);
+
+     /* ========== BAR BACKGROUND ============ */
+     --bar-background: rgba(0, 0, 0, 0.2);
+
+     --shape-filter: invert(-1);
+
+
+    --first-gradient: linear-gradient(
+        0deg, 
+        var(--bg-color-alt) 0%, 
+        var(--bg-color) 100%
+    );
+    --second-gradient: linear-gradient(
+        180deg, 
+        var(--bg-color-alt) 0%, 
+        var(--bg-color) 100%
+    );
+    --third-gradient: linear-gradient(
+        180deg, 
+        var(--bg-color) 0%, 
+        var(--bg-color) 100%
+    );
 }
 
 h1, 
@@ -147,7 +203,7 @@ img{
 
 .shape{
     position: absolute;
-    filter: invert(1);
+    filter: var(--shape-filter);
     opacity: 0.6;
 }
 
