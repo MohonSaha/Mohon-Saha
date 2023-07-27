@@ -1,9 +1,17 @@
-import React, { useEffect, useState } from "react";
-import {IoMenu } from "react-icons/io5";
+import { useEffect, useState } from "react";
+import './Navbar.css';
+import { IoCloseSharp, IoMenu, IoReorderTwo } from "react-icons/io5";
+import { FaGripLines, FaMoon } from "react-icons/fa";
 
 const Navbar = () => {
   const [sticky, setSticky] = useState(false);
   const [open, setOpen] = useState(false);
+
+
+  const toggleTheme = () => {
+    alert("yes")
+  }
+
   const menuLinks = [
     { name: "HOME", link: "#home" },
     { name: "ABOUT", link: "#about" },
@@ -19,58 +27,63 @@ const Navbar = () => {
   }, []);
   return (
     <nav
-      className={`fixed w-full left-0 top-0 z-[999] ${
-        sticky ? "bg-white/60  text-gray-900" : "text-white"
-      }`}
+      className={`fixed nav__container w-full left-0 top-0 z-[999] text-white
+      ${sticky ? "shadow-lg sticky__bg" : ""
+        }      `}
     >
-      <div className="flex items-center justify-between">
-        <div className="mx-7">
+      <div className="flex container__nav items-center justify-between w-full">
+        <div className="">
           <span className="text-4xl uppercase font-bold flex">
-            <img src="logo-2.png" className="w-10" alt="" />
+            {/* <img src="logo-2.png" className="w-10" alt="" /> */}
+            <span className="text_m">M</span>
             <h4>OHON</h4>
           </span>
         </div>
-        <div
-          className={` ${
-            sticky ? "md:bg-white/0 bg-white" : "bg-white"
-          } text-gray-900 md:block hidden px-7 py-2 font-medium  rounded-bl-full`}
-        >
-          <ul className="flex items-center gap-1 py-2 text-lg">
-            {menuLinks?.map((menu, i) => (
-              <li key={i} className="px-6 hover:text-cyan-600">
-                <a href={menu?.link}>{menu?.name}</a>
-              </li>
-            ))}
-          </ul>
-        </div>
 
-        {/*================= CODE FOR MOBILE ===========================*/}
 
-        <div
-          onClick={() => setOpen(!open)}
-          className={`z-[999]  ${
-            open ? "text-gray-900" : "text-gray-100"
-          } text-3xl md:hidden m-5`}
-        >
-          <IoMenu></IoMenu>
-        </div>
-        <div
-          className={`md:hidden text-gray-900 absolute w-2/3 h-screen
-      px-7 py-2 font-medium bg-white top-0 duration-300 ${
-        open ? "right-0" : "right-[-100%]"
-      }`}
-        >
-          <ul className="flex flex-col mt-[50%] h-full gap-10 py-2 text-lg">
-            {menuLinks?.map((menu, i) => (
-              <li
-                onClick={() => setOpen(false)}
-                key={i}
-                className="px-6 hover:text-cyan-600"
-              >
-                <a href={menu?.link}>{menu?.name}</a>
-              </li>
-            ))}
-          </ul>
+        <div>
+          <div className="flex items-center">
+
+
+            <span className="mr-5 cursor-pointer" onClick={() => toggleTheme()}>
+              {
+                <FaMoon></FaMoon>
+              }
+            </span>
+
+
+            <div
+              onClick={() => setOpen(!open)}
+              className={`z-[999] menu__bar relative top-0 right-0  ${open ? "text-gray-900" : "text-gray-100"
+                } text-3xl my-4 `}
+            >
+
+              {
+                open ? <span className="open__nav cursor-pointer"><IoCloseSharp></IoCloseSharp></span> : <IoReorderTwo className="close__nav cursor-pointer"></IoReorderTwo>
+              }
+
+
+
+            </div>
+          </div>
+
+          <div
+            className={`nav__area text-gray-900 absolute w-2/12 h-screen
+      px-7 py-2 font-medium bg-white top-0 duration-300 ${open ? "right-0" : "right-[-100%]"
+              }`}
+          >
+            <ul className="flex flex-col mt-[50%] h-full gap-10 py-2 text-lg">
+              {menuLinks?.map((menu, i) => (
+                <li
+                  onClick={() => setOpen(false)}
+                  key={i}
+                  className="px-6 hover:text-cyan-600"
+                >
+                  <a href={menu?.link}>{menu?.name}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </nav>

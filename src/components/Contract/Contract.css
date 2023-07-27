@@ -1,0 +1,26 @@
+.contact{
+    background-image: var(--second-gradient);
+}
+
+.contact_info_parent{
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    column-gap: 32px;
+}
+
+.contact__icon__parent{
+    width: 50px;
+    height: 40px;
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    box-shadow: var(--shadow);
+    width: 40px;
+
+}
+
+.contact__icon{
+    position: relative;
+    top: 20%;
+    left: 25%;
+}
