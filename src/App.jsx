@@ -7,6 +7,7 @@ import Resume from "./components/Resume/Resume";
 import Contract from "./components/Contract/Contract";
 // import Navbar from "./oldComponents/Navbar/Navbar";
 import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 
 
 
@@ -16,13 +17,12 @@ const App = () => {
 
       
       <Navbar></Navbar>
-      {/* <Navbar></Navbar> */}
       <Home></Home>
       <Services></Services>
       <Skills></Skills>
       <Portfolio></Portfolio>
-      {/* <Resume></Resume> */}
       <Contract></Contract>
+      <Footer></Footer>
 
     </div>
   );

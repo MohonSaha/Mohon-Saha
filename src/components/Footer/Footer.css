@@ -1,0 +1,5 @@
+.footer__section{
+    background-color: var(--bg-color);
+    color: var(--title-color);
+    font-weight: 600;
+}

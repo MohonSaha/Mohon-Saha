@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import './Navbar.css';
-import { IoCloseSharp, IoMenu, IoReorderTwo } from "react-icons/io5";
-import { FaGripLines, FaMoon, FaSun } from "react-icons/fa";
+import { IoCloseSharp, IoReorderTwo } from "react-icons/io5";
+import { FaMoon, FaSun } from "react-icons/fa";
 
 const Navbar = () => {
   const [sticky, setSticky] = useState(false);
@@ -24,7 +24,7 @@ const Navbar = () => {
 
   const menuLinks = [
     { name: "HOME", link: "#home" },
-    { name: "ABOUT", link: "#about" },
+    { name: "SERVICES", link: "#services" },
     { name: "SKILLS", link: "#skills" },
     { name: "PROJECTS", link: "#projects" },
     { name: "CONTACT", link: "#contact" },
@@ -92,7 +92,11 @@ const Navbar = () => {
                   <a href={menu?.link}>{menu?.name}</a>
                 </li>
               ))}
+
+
             </ul>
+
+            
           </div>
         </div>
       </div>

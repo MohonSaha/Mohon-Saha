@@ -5,7 +5,7 @@
 
 /* ======== CSS VARIABLES ======== */
 
-:root{
+:root {
 
     /*==== COLLERS ====*/
     /* --primary-color: hsl(165, 60%, 40%);
@@ -50,7 +50,7 @@
     --small-font-size: 15px;
     --smaller-font-size: 14px;
     --tiny-font-size: 13px;
-    
+
 
 
     /*==== TRANSITION ====*/
@@ -60,7 +60,7 @@
 
 
 /* ======== RESET ======== */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -68,18 +68,18 @@
 
 
 button,
-input, 
-body{
+input,
+body {
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
 }
 
-body{
+body {
     color: var(--text-color);
     background-color: var(--bg-color);
 }
 
-.dark__theme{
+.dark__theme {
     --bg-color: hsl(216, 18%, 16%);
     --primary-color: hsl(165, 60%, 40%);
     --title-color: hsl(0, 0%, 100%);
@@ -94,26 +94,23 @@ body{
     /* ========== BAR BACKGROUND ============ */
     --bar-background: rgba(255, 255, 255, 0.2);
 
+    --text-shadow: 2px 2px hsl(0, 0%, 0%), -2px 2px hsl(0, 0%, 0%), 2px -2px hsl(0, 0%, 0%), -2px -2px hsl(0, 0%, 0%), 5px 5px 0 rgb(0 0 0 / 20%);
+
+    /* ========= Shape Color ================ */
     --shape-filter: invert(1);
 
-    --first-gradient: linear-gradient(
-        0deg, 
-        var(--bg-color-alt) 0%, 
-        var(--bg-color) 100%
-    );
-    --second-gradient: linear-gradient(
-        180deg, 
-        var(--bg-color-alt) 0%, 
-        var(--bg-color) 100%
-    );
-    --third-gradient: linear-gradient(
-        180deg, 
-        var(--bg-color) 0%, 
-        var(--bg-color) 100%
-    );
+    --first-gradient: linear-gradient(0deg,
+            var(--bg-color-alt) 0%,
+            var(--bg-color) 100%);
+    --second-gradient: linear-gradient(180deg,
+            var(--bg-color-alt) 0%,
+            var(--bg-color) 100%);
+    --third-gradient: linear-gradient(180deg,
+            var(--bg-color) 0%,
+            var(--bg-color) 100%);
 }
 
-.light__theme{
+.light__theme {
     --bg-color: hsl(265, 87%, 94%);
     --primary-color: hsl(165, 60%, 40%);
     --title-color: hsl(0, 0%, 0%);
@@ -124,103 +121,101 @@ body{
     /*==== SHADOW ====*/
     --shadow: 5px 5px rgba(1, 1, 1, 0.531);
 
-     /* ========== BAR BACKGROUND ============ */
-     --bar-background: rgba(0, 0, 0, 0.2);
+    /* ========== BAR BACKGROUND ============ */
+    --bar-background: rgba(0, 0, 0, 0.2);
 
-     --shape-filter: invert(-1);
+    --text-shadow: 2px 2px hsl(0, 0%, 100%), -2px 2px hsl(0, 0%, 100%), 2px -2px hsl(0, 0%, 100%), -2px -2px hsl(0, 0%, 100%), 5px 5px 0 rgba(255, 255, 255, 0.2);
 
 
-    --first-gradient: linear-gradient(
-        0deg, 
-        var(--bg-color-alt) 0%, 
-        var(--bg-color) 100%
-    );
-    --second-gradient: linear-gradient(
-        180deg, 
-        var(--bg-color-alt) 0%, 
-        var(--bg-color) 100%
-    );
-    --third-gradient: linear-gradient(
-        180deg, 
-        var(--bg-color) 0%, 
-        var(--bg-color) 100%
-    );
+    /* ==========Shape Color================ */
+    --shape-filter: invert(-1);
+
+
+    --first-gradient: linear-gradient(0deg,
+            var(--bg-color-alt) 0%,
+            var(--bg-color) 100%);
+    --second-gradient: linear-gradient(180deg,
+            var(--bg-color-alt) 0%,
+            var(--bg-color) 100%);
+    --third-gradient: linear-gradient(180deg,
+            var(--bg-color) 0%,
+            var(--bg-color) 100%);
 }
 
-h1, 
-h2, 
-h3{
+h1,
+h2,
+h3 {
     color: var(--title-color);
     font-weight: 700;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
-p{
+p {
     line-height: 1.7;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-input, 
+input,
 textarea,
-button{
+button {
     border: none;
     outline: none;
     background: transparent;
 }
 
-button{
+button {
     cursor: pointer;
 }
 
-img{
+img {
     max-width: 100%;
 }
 
 
 /* ============= RESUABLE CSS CLASSES ============ */
 
-.container{
+.container {
     max-width: 1150px;
     padding-inline: 12px;
     margin-inline: auto;
 }
 
-.grid{
+.grid {
     display: grid;
     gap: 40px;
 }
 
-.text-cs{
+.text-cs {
     text-transform: uppercase;
-    letter-spacing: 0.05em;  
+    letter-spacing: 0.05em;
 }
 
-.shape{
+.shape {
     position: absolute;
     filter: var(--shape-filter);
     opacity: 0.6;
 }
 
-.section{
+.section {
     padding-bottom: 150px;
 }
 
 .section__title,
-.section__subtitle{
-    text-align: center; 
+.section__subtitle {
+    text-align: center;
 }
 
-.section__title{
+.section__title {
     font-size: var(--h1-font-size);
 }
 
-.section__subtitle{
+.section__subtitle {
     color: var(--primary-color);
     font-size: var(--smaller-font-size);
     text-transform: uppercase;
@@ -228,7 +223,7 @@ img{
     margin-bottom: 60px;
 }
 
-.section__subtitle span{
+.section__subtitle span {
     font-family: var(--second-font);
     color: var(--title-color);
     font-size: var(--h3-font-size);
@@ -236,28 +231,36 @@ img{
     margin-left: 10px;
 }
 
-.card{
+.card {
     background-color: var(--container-color);
     overflow: hidden;
     text-align: left;
     position: relative;
 }
 
-.card__one{
+.card__one {
     padding: 30px 35px;
     border-radius: 18px;
 }
 
-.card__two{
+.card__two {
     padding: 15px;
     border-radius: 20px;
     /* margin-bottom: 30px; */
 }
 
 
-.c__shape{
+.c__shape {
     right: -24px;
     bottom: -24px;
     width: 141px;
     height: 141px;
+}
+
+@media screen and (max-width:576px) {
+    .container {
+        max-width: 350px;
+        padding-inline: 12px;
+        margin-inline: auto;
+    }
 }

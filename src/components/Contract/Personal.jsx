@@ -1,4 +1,4 @@
-
+// import './Contract.css'
 
 const Personal = ({ contact }) => {
     return (
@@ -9,7 +9,10 @@ const Personal = ({ contact }) => {
                         <div className="contact__icon__parent">
                             <p className="contact__icon">{info.logo}</p>
                         </div>
-                        <span className="contract_info">{info.title}</span>
+                        <div>
+                            <p className="contract_info">{info.title}</p>
+                            <p className="">{info.subtitle}</p>
+                        </div>
 
                     </div>
                 )

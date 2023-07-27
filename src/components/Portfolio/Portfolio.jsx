@@ -32,7 +32,7 @@ const Portfolio = () => {
 
 
     return (
-        <section className="portfolio section" id="work">
+        <section className="portfolio section" id="projects">
             <h2 className="section__title">
                 Portfolio
             </h2>
