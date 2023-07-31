@@ -111,8 +111,8 @@ body {
 }
 
 .light__theme {
-    --bg-color: hsl(265, 87%, 94%);
-    --primary-color: hsl(165, 60%, 40%);
+    --bg-color: hsl(265, 67%, 96%);
+    --primary-color: #29a385;
     --title-color: hsl(0, 0%, 0%);
     --text-color: hsl(0, 0%, 8%);
     --container-color: hsl(0, 0%, 100%);

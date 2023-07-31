@@ -34,3 +34,11 @@
 .logo__moon {
     font-size: var(--h5-font-size);
 }
+
+@media screen and (max-width:576px) {
+
+    .container__nav {
+        max-width: 350px;
+        margin-inline: auto;
+    }
+}
